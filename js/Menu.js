@@ -30,9 +30,7 @@ if(localStorage.getItem('cart')){
 }
 // save item in localStorage 
 function pushToStorage(){
-
     localStorage.setItem('cart' , JSON.stringify(cart));
-    
 }
 
 // to render items and menu
@@ -56,8 +54,16 @@ function renderMenu(productType){
             inputEl.required;
             buttonEl.textContent = 'Add to cart';
             buttonEl.addEventListener('click', function(){
-                products[i].quantity = document.getElementById(`input${i}`).value;
+                let boolen = true;
+                for(let j = 0; j < cart.length; j++){
+                    if(products[i].name === cart[j].name){
+                        cart[j].quantity = parseInt(cart[j].quantity) + parseInt(document.getElementById(`input${i}`).value);
+                        boolen = false;
+                    }
+                }
+                if (boolen){
                 cart.push(products[i]);
+                }
                 pushToStorage();
                 inputEl.value = '1';
             });
