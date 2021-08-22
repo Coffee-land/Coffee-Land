@@ -102,3 +102,4 @@ function updateBill() {
   $('.subtotal .value').text('$ ' + subtotal.toFixed(2));
   $('.total .value').text('$ ' + total.toFixed(2));
 }
+
