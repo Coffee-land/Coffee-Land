@@ -6,97 +6,100 @@ let subtotal = 0;
 let total = 0;
 let shipping = 5;
 let cart = JSON.parse(localStorage.getItem('cart'));
-
-function upToDataStorage(){
-  localStorage.setItem('cart' , JSON.stringify(cart));
+function upToDataStorage() {
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
-function renderCart(){
+function renderCart() {
   containerEl.innerHTML = '';
-  for(let i = 0; i < cart.length;i++){
-  let sectionEl = document.createElement('section');
-  sectionEl.id = 'cart';
-  containerEl.appendChild(sectionEl);
+  if (cart) {
+    for (let i = 0; i < cart.length; i++) {
+      let sectionEl = document.createElement('section');
+      sectionEl.id = 'cart';
+      containerEl.appendChild(sectionEl);
 
-  let articleEl = document.createElement('article');
-  articleEl.className = "product";
-  sectionEl.appendChild(articleEl);
+      let articleEl = document.createElement('article');
+      articleEl.className = "product";
+      sectionEl.appendChild(articleEl);
 
-  let headerEl = document.createElement('header');
-  articleEl.appendChild(headerEl);
-  
-  let aEl = document.createElement('a');
-  aEl.className = "remove";
-  headerEl.appendChild(aEl);
+      let headerEl = document.createElement('header');
+      articleEl.appendChild(headerEl);
 
-  let imgEl = document.createElement('img');
-  imgEl.src = cart[i].imgurl;
-  aEl.appendChild(imgEl);
+      let aEl = document.createElement('a');
+      aEl.className = "remove";
+      headerEl.appendChild(aEl);
 
-  let h3El = document.createElement('h3');
-  h3El.textContent = 'Remove product';
-  h3El.addEventListener('click', function(){
-    cart.splice(i,1);
-    upToDataStorage();
-    upToDataStorage();
-    renderCart();
-    renderFooter();
-  })
-  aEl.appendChild(h3El);
+      let imgEl = document.createElement('img');
+      imgEl.src = cart[i].imgurl;
+      aEl.appendChild(imgEl);
 
-  let divEl = document.createElement('div');
-  divEl.className = 'content';
-  articleEl.appendChild(divEl);
+      let h3El = document.createElement('h3');
+      h3El.textContent = 'Remove product';
+      h3El.addEventListener('click', function () {
+        cart.splice(i, 1);
+        subtotalArr.splice(i,1);
+        upToDataStorage();
+        renderCart();
+        renderFooter();
+      })
+      aEl.appendChild(h3El);
 
-  let h1El = document.createElement('h1');
-  h1El.textContent = cart[i].name;
-  divEl.appendChild(h1El);
+      let divEl = document.createElement('div');
+      divEl.className = 'content';
+      articleEl.appendChild(divEl);
 
-  let footerEl1 = document.createElement('footer');
-  footerEl1.className = 'content';
-  articleEl.appendChild(footerEl1);
+      let h1El = document.createElement('h1');
+      h1El.textContent = cart[i].name;
+      divEl.appendChild(h1El);
 
-  let span1El = document.createElement('span');
-  span1El.className = 'qt-minus';
-  span1El.textContent = '-';
-  span1El.addEventListener('click', function(){
-    cart[i].quantity --;
-    upToDataStorage();
-    renderCart();
-    renderFooter()
-  })
-  footerEl1.appendChild(span1El);
+      let footerEl1 = document.createElement('footer');
+      footerEl1.className = 'content';
+      articleEl.appendChild(footerEl1);
 
-  let span2El = document.createElement('span');
-  span2El.className = 'qt';
-  span2El.textContent = cart[i].quantity;
-  footerEl1.appendChild(span2El);
+      let span1El = document.createElement('span');
+      span1El.className = 'qt-minus';
+      span1El.textContent = '-';
+      span1El.addEventListener('click', function () {
+        if (cart[i].quantity > 1) {
+          cart[i].quantity--;
+        }
+        upToDataStorage();
+        renderCart();
+        renderFooter()
+      })
+      footerEl1.appendChild(span1El);
 
-  let span3El = document.createElement('span');
-  span3El.className = 'qt-plus';
-  span3El.textContent = '+';
-  span3El.addEventListener('click', function(){
-    cart[i].quantity ++;
-    upToDataStorage();
-    renderCart();
-    renderFooter()
-  })
-  footerEl1.appendChild(span3El);
-  
-  let h2El = document.createElement('h2');
-  h2El.className = 'full-price';
-  h2El.textContent = cart[i].quantity * cart[i].price + 'JOD';
-  subtotalArr[i] = cart[i].quantity * cart[i].price;
-  footerEl1.appendChild(h2El);
-  
-  let h2El2 = document.createElement('h2');
-  h2El2.className = 'price';
-  h2El2.textContent = cart[i].price + 'JOD';
-  footerEl1.appendChild(h2El2);
-}
+      let span2El = document.createElement('span');
+      span2El.className = 'qt';
+      span2El.textContent = cart[i].quantity;
+      footerEl1.appendChild(span2El);
 
+      let span3El = document.createElement('span');
+      span3El.className = 'qt-plus';
+      span3El.textContent = '+';
+      span3El.addEventListener('click', function () {
+        cart[i].quantity++;
+        upToDataStorage();
+        renderCart();
+        renderFooter()
+      })
+      footerEl1.appendChild(span3El);
+
+      let h2El = document.createElement('h2');
+      h2El.className = 'full-price';
+      h2El.textContent = cart[i].quantity * cart[i].price + 'JOD';
+      subtotalArr[i] = cart[i].quantity * cart[i].price;
+      footerEl1.appendChild(h2El);
+
+      let h2El2 = document.createElement('h2');
+      h2El2.className = 'price';
+      h2El2.textContent = cart[i].price + 'JOD';
+      footerEl1.appendChild(h2El2);
+    }
+  }
 }
 renderCart();
-function renderFooter(){
+
+function renderFooter() {
   footerEl.innerHTML = '';
   let divEl1 = document.createElement('div');
   divEl1.className = 'container clearfix';
@@ -109,9 +112,12 @@ function renderFooter(){
   let h2El = document.createElement('h2');
   h2El.className = 'subtotal';
   subtotal = 0;
-  for(let i = 0; i < subtotalArr.length; i++){
-        subtotal += subtotalArr[i];
+  for (let i = 0; i < subtotalArr.length; i++) {
+    subtotal += subtotalArr[i];
+    console.log(subtotalArr[i]);
   }
+  console.log(subtotalArr);
+
   h2El.textContent = `Subtotal: ${subtotal}JOD`
   divEl2.appendChild(h2El);
 
@@ -127,16 +133,19 @@ function renderFooter(){
   let h1El = document.createElement('h1');
   h1El.className = 'total';
   total = subtotal + shipping;
+  if (subtotal === 0) {
+    total = 0;
+  }
   h1El.textContent = `Total: ${total}JOD`
   divEl3.appendChild(h1El);
 
   let aEl = document.createElement('a');
   aEl.className = 'btn';
   aEl.textContent = 'Checkout';
-  aEl.addEventListener('click',openForm)
+  aEl.addEventListener('click', openForm)
   divEl3.appendChild(aEl);
 
-  
+
 }
 renderFooter();
 
