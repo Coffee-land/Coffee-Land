@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/host.css">
     <title>Host An Event</title>
 </head>
@@ -19,90 +18,90 @@
         <h1> Host An Event </h1>
 
         <section id="img1">
-            <img src="img/build-com-coffee-shop-th.jpg" height="200" width="200" alt="build-com-coffee-shop-th">
+            <img src="img/build-com-coffee-shop-th.jpg" alt="build-com-coffee-shop-th">
         </section>
         <section id="img2">
             <img src="img/hostAnEvent.jpg" alt="hostAnEvent">
         </section>
         <section id="img3">
-            <img src="img/coffee_shop_sign.jpg" height="200" width="200" alt="coffee_shop_sign">
+            <img src="img/coffee_shop_sign.jpg" alt="coffee_shop_sign">
         </section>
 
         <section id="p">
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas dolorum consequuntur maxime tempora
                 sed at incidunt enim obcaecati laboriosam deserunt facere corporis eveniet adipisci laborum, labore
-                sequi. Quam, et dolorem.</p>
+                sequi. Quam, et dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque facere odio
+                dolorem nostrum error, earum alias maiores iste. Culpa suscipit dolorum mollitia placeat fuga itaque
+                odio, voluptatibus nesciunt similique accusamus.</p>
         </section>
 
         <form id='form'>
-          
-          <button class="open-button" onclick="openForm()">pick your event from here </button>
-          
-          <div class="form-popup" id="myForm">
-          <p>
-          <h2>Event Request</h2>
-          <p>To enter an Event Request, please fill out the following form.</p>
 
-          <p>
-          <h3>Your Contact Information:</h3>
+            <button class="open-button" onclick="openForm()">pick your event from here </button>
 
-          
-              <div>
-                  <label for="fname">First Name</label>
-                  <input type="text" name="fname" id="fname" required>
-              </div>
-              <div>
-                  <label for="lname">Last Name</label>
-                  <input type="text" name="lname" id="lname" required>
-              </div>
-              <div>
-                  <label for="email">Email Adress</label>
-                  <input type="email" name="email" id="email" required>
-              </div>
-              <div>
-                  <label for="phone">Phone number</label>
-                  <input type="number" name="phonenum" id="phonenum" required>
-              </div>
+            <div class="form-popup" id="myForm">
+                <h2>Event Request</h2>
+                <p>To enter an Event Request, please fill out the following form.</p><br>
 
-              <p>
-              <h3>Your Event Details:</h3>
+                <h3>Your Contact Information:</h3><br>
+
+
+                <div>
+                    <label for="fname">First Name</label><br>
+                    <input type="text" name="fname" id="fname" required>
+                </div>
+                <div>
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" name="lname" id="lname" required>
+                </div>
+                <div>
+                    <label for="email">Email Adress</label><br>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone number</label><br>
+                    <input type="number" name="phonenum" id="phonenum" required>
+                </div>
+
+                <p>
+                <br><h3>Your Event Details:</h3><br>
 
 
 
-              <div>
-                  <label for="eventNature">Nature of this Event (e.g., Birthday Party or Business Dinner)</label>
-                  <textarea id="eventNature" name="eventNature"></textarea>
-              </div>
+                <div>
+                    <label for="eventNature">Nature of this Event (e.g., Birthday Party or Business Dinner)</label><br>
+                    <textarea id="eventNature" name="eventNature"></textarea>
+                </div>
 
-              <div>
-                  <label for="date">event date</label>
-                  <input type="date" name="date" id="date" min="2021-08-23">
-              </div>
+                <div>
+                    <label for="date">event date</label><br>
+                    <input type="date" name="date" id="date" min="2021-08-23">
+                </div>
 
-              <div>
-                  <label for="start">start time</label>
-                  <input type="time" name="start" id="start">
-              </div>
+                <div>
+                    <label for="start">start time</label><br>
+                    <input type="time" name="start" id="start">
+                </div>
 
-              <div>
-                  <label for="end">end time</label>
-                  <input type="time" name="end" id="start">
-              </div>
+                <div>
+                    <label for="end">end time</label><br>
+                    <input type="time" name="end" id="start">
+                </div>
 
-              <div>
-                  <label for="guests">number of people </label>
-                  <input type="number" name="guests" id="guests" required>
-              </div>
+                <div>
+                    <label for="guests">number of people </label><br>
+                    <input type="number" name="guests" id="guests" required>
+                </div>
 
-              <div>
-                  <label for="extrainfo">Is there any additional information you would like to add?</label>
-                  <textarea id="extrainfo" name="extrainfo"></textarea>
-              </div>
+                <div>
+                    <label for="extrainfo">Is there any additional information you would like to add?</label><br>
+                    <textarea id="extrainfo" name="extrainfo"></textarea>
+                </div>
 
-              <button type="submit" class="btn">Order Now</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
-      </div>
+                <br><button type="submit" class="btn">Book Now</button><br>
+                <button type="button" class="btnCancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
     </main>
     <footer>
 
