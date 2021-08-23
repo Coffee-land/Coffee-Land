@@ -22,6 +22,8 @@ new Product('americano', 12, 'hot');
 new Product('bean', 30, 'beans');
 new Product('beanBag', 30, 'beans');
 new Product('latte', 15, 'hot');
+new Product('latte', 15, 'cold');
+new Product('americano', 12, 'cold');
 new Product('latteCold', 15, 'cold');
 
 // checking localStorage 
@@ -52,7 +54,6 @@ function renderMenu(productType) {
             let inputEl = document.createElement('input');
             let buttonEl = document.createElement('button');
             imgEl.src = products[i].imgurl;
-            imgEl.style.height = '100px';
             inputEl.type = 'number';
             inputEl.value = '1';
             inputEl.min = '1';
@@ -80,8 +81,8 @@ function renderMenu(productType) {
                 }
             });
             liEl.appendChild(imgEl);
-            liEl.appendChild(inputEl);
             liEl.appendChild(buttonEl);
+            liEl.appendChild(inputEl);
             ulEl.appendChild(liEl);
         }
     }
