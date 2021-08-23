@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +34,75 @@
                 sequi. Quam, et dolorem.</p>
         </section>
 
-    
+        <form id='form'>
+          
+          <button class="open-button" onclick="openForm()">pick your event from here </button>
+          
+          <div class="form-popup" id="myForm">
+          <p>
+          <h2>Event Request</h2>
+          <p>To enter an Event Request, please fill out the following form.</p>
+
+          <p>
+          <h3>Your Contact Information:</h3>
+
+          
+              <div>
+                  <label for="fname">First Name</label>
+                  <input type="text" name="fname" id="fname" required>
+              </div>
+              <div>
+                  <label for="lname">Last Name</label>
+                  <input type="text" name="lname" id="lname" required>
+              </div>
+              <div>
+                  <label for="email">Email Adress</label>
+                  <input type="email" name="email" id="email" required>
+              </div>
+              <div>
+                  <label for="phone">Phone number</label>
+                  <input type="number" name="phonenum" id="phonenum" required>
+              </div>
+
+              <p>
+              <h3>Your Event Details:</h3>
+
+
+
+              <div>
+                  <label for="eventNature">Nature of this Event (e.g., Birthday Party or Business Dinner)</label>
+                  <textarea id="eventNature" name="eventNature"></textarea>
+              </div>
+
+              <div>
+                  <label for="date">event date</label>
+                  <input type="date" name="date" id="date" min="2021-08-23">
+              </div>
+
+              <div>
+                  <label for="start">start time</label>
+                  <input type="time" name="start" id="start">
+              </div>
+
+              <div>
+                  <label for="end">end time</label>
+                  <input type="time" name="end" id="start">
+              </div>
+
+              <div>
+                  <label for="guests">number of people </label>
+                  <input type="number" name="guests" id="guests" required>
+              </div>
+
+              <div>
+                  <label for="extrainfo">Is there any additional information you would like to add?</label>
+                  <textarea id="extrainfo" name="extrainfo"></textarea>
+              </div>
+
+              <button type="submit" class="btn">Order Now</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+      </div>
     </main>
     <footer>
 
