@@ -25,11 +25,11 @@ section{
 #img2 img{
   border-radius: 8px;
   display: block;
-  margin-right: 3%;
+  margin-right: 1%;
   margin-left: 7%;
-  width: 41.5%;
-  height: 338px;
-  margin-top: 3%;
+  width: 42.5%;
+  height: 400px;
+  margin-top: 1%;
   float: left;
   box-shadow: 5px 5px 10px black;
 
@@ -92,6 +92,8 @@ button{
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
+  border-radius: 8px;
+
 }
 .open-button{
   margin-left: 40%;
@@ -110,23 +112,19 @@ button{
   background: #429188;
 }
 h2{
-  padding-left: 10px;
   font-size: 30px;
   font-family: Amatic SC, cursive;
 }
 div p{
-  padding-left: 10px;
   font-size: 18px;
   font-family: Amatic SC, cursive;
 }
 div h3{
   font-size: 25px;
-  padding-left: 10px;
   font-family: Amatic SC, cursive;
 }
 div{
   font-size: 20px;
-  padding-left: 10px;
   text-align: center;
   font-family: Amatic SC, cursive;
  
