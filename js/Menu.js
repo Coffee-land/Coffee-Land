@@ -76,12 +76,15 @@ function renderMenu(productType) {
             let imgEl = document.createElement('img');
             let inputEl = document.createElement('input');
             let buttonEl = document.createElement('button');
+            let spanPriceEl = document.createElement('span');
             let spanEl = document.createElement('span');
             let temName = '';
             for(let j = 0; j < products[i].name.split('_').length; j++){
                 temName += `${products[i].name.split('_')[j]} `
             }
             spanEl.textContent = temName;
+            spanPriceEl.id = "sPrice"
+            spanPriceEl.textContent = `${products[i].price} JOD`
             imgEl.src = products[i].imgurl;
             inputEl.type = 'number';
             inputEl.value = '1';
@@ -114,6 +117,7 @@ function renderMenu(productType) {
             liEl.appendChild(spanEl);
             liEl.appendChild(buttonEl);
             liEl.appendChild(inputEl);
+            liEl.appendChild(spanPriceEl);
             ulEl.appendChild(liEl);
         }
     }

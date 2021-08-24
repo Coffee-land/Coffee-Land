@@ -81,7 +81,6 @@ li {
     position: relative;
 }
 ul li img {
-    width: 230px;
     height: 195px;
     border: transparent solid;
     border-top-right-radius: 20px;
@@ -95,6 +94,12 @@ ul li img {
   top: 30px;
   font-size: 16px;
   }  
+  #sPrice{
+    top: 30px;
+    left: 150px;
+    transform: rotate(45deg);
+    text-shadow: 0 0 5px #000000;
+    }
 ul li button{
     cursor: pointer;
     background: black;
