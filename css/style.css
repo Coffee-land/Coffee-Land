@@ -33,7 +33,7 @@ header{
     left: 0;
     z-index: 9999;
     width: 100%;
-    height: 50px;
+    height: 70px;
     background-color:black;
     box-shadow: 0px 0px 10px gray;
     display: flex;
@@ -44,25 +44,27 @@ header{
   
   .topnav> .brand {
       position: absolute;
-      left: 2%;
-      top: 0;
+      left: 5%;
+      top: 12%;
   }
-  .topnav> .cart-1 {
-    position: absolute;
-    right: 2%;
-    top: 10%;
-    width: 40px; 
-    height: 30px
-}
- 
 
 .topnav .link {
-    color: white;
-    margin-right:200px ;
-    margin-left: 10PX;
+    flex: left;
+    margin: 7% 10px 11px;
+    padding: 10px 0 0 12px;
     text-decoration: none;
-    font-size: 30px;
-    position: relative;
+    color: #fff;
+    font-size: 25px;
+    font-family:open-sans-serif;
+    /* font-weight: bolder;  */
+
+}
+.topnav >a>i{
+    display: inline;
+    float: left;
+    margin-top: 12px;
+    margin-right:12px;
+    margin-bottom:17px;
 }
 .topnav>a :hover{
     -ms-transform: scale(1.5); /* IE 9 */
@@ -71,17 +73,13 @@ header{
   
   }
   
-  .topnav >.link:hover::after {
-    content: "";
-    position: absolute;
-    right: 20%;
-    bottom: 0;
-    width : 70%;
-    border: 2px solid white;
+  .topnav >.link:hover {
+    border-bottom: 2px solid white;
   }
+
+
   
   #big-h{
-
     position: absolute;
     color: whitesmoke;
     font-size:170px;
@@ -90,7 +88,6 @@ header{
     width: 60%;
   }
   #big-h:hover{
-    /* color: rgb(197, 169, 7); */
     color:black;
   }
 
@@ -131,56 +128,64 @@ header{
 main{
     padding-top: 50%;
     overflow:hidden;
+    min-height: 800px;
 }
 #s1{
     /* background-color: rgb(255, 249, 161); */
     padding-top: 0%;
     margin-top:0%;
-    padding-bottom: 28%;    
+    padding-bottom: 40%;    
     background-color: rgb(255, 254, 176);
     border-bottom:solid black;
 }
 
 #why-us{
-    padding-top:7%;
+    padding-top:10%;
+    padding-bottom: 5%;
     font-size:100px;
     text-align:center;
+    font-family: Amatic SC, cursive;
+    
 }
 
 .Sourcing {
-    float:right;
+    float:left;
     text-align: center; 
     width:25%;
-    margin-top: 2%;
+    /* margin-top: 2%; */
     margin-right: 3%;
-    margin-left: 1%;
+    margin-left:3%;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
-    height:300px;
+    line-height: 1.4;
+    height:500px;
 }
 .Roasting{
     float:right; 
     text-align: center; 
-    margin-top: 2%;
-    margin-left: 1%;
-    margin-right: 4%;
+    margin-left: 3%;
+    margin-right: 9%;
     width:25%;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
-    height:300px;
+    line-height: 1.4;
+    height:500px; 
+
 }
 .Delivery{
     float:right;
     text-align: center; 
     margin-right: 3%;
-    margin-top: 2%;
     width:25%;
     font-family: 'Courier New', Courier, monospace;
     font-size: larger;
-    height:300px;
+    line-height: 1.4;
+    height:500px; 
 }
 #p1,#p2,#p3 {
     text-align: center;   
+    width: 100%;
+    margin-bottom: 3%;
 }
 .Delivery,.Roasting,.Sourcing{
     display: inline;
@@ -190,23 +195,24 @@ main{
 }
 
   #s3{
-      position: absolute;
+      position: relative;
       right: 0;
-      /* border: solid red ; */
+      /* bottom:51%; */
       background-color: #FF6B6B;
-      padding-bottom: 25%;  
+      padding-bottom: 35%;  
       width: 100%;
-      /* border-left: solid black;   */
+      overflow: hidden;
 
   }
   #map>iframe{
       position: absolute;
-      right:0%;
+      right:10%;
+      left:5%;
       top:27%;
-      height:100%;
-      width:100%;
-      border-radius: 10%;
-      /* margin-bottom: 5% 10% 5% 10%; */
+      height:60%;
+      width:90%;
+      border-radius:10px;
+      border: solid rgb(0, 0, 0);
     
   }
 
@@ -248,13 +254,14 @@ main{
   
 
 #snacks {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background-color:#F6D167;
     clear: left;
+    /* margin-bottom: 4%; */
   }
   #coffeeheader {
      position: relative;
-     padding:0 0 0 0 ;
+     padding:4% 0 2% 0 ;
     font-family: Amatic SC, cursive;
     text-align: center;
     font-size: 100px;
@@ -263,8 +270,10 @@ main{
   }
   #snackpics {
     width: 100%;
-    height: 80%;
-    margin-bottom:3%;
+    height: 100%;
+    box-sizing:border-box;
+    /* margin-bottom:3%; */
+    /* block-size: fit-content; */
     object-fit: cover;
   }
   #coffeebody {
@@ -282,7 +291,7 @@ main{
   #store {
       background-color:rgb(127, 241, 217);
       margin: 0;
-      padding: 0;
+      padding: 0 0 4% 0;
   }
   
   #row {
@@ -291,19 +300,55 @@ main{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
+
   }
   
   #column {
-    flex: 33.33%;
-    padding: 10px;
+    float: left;
+    width: 100%;
+    padding: 10px;   
+    margin-bottom: 4%;
+
+    overflow: hidden;
+
   }
-  #column:hover{
+  #column > #snackpics
+{
+    transition: all 0.3s;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#column > #snackpics:hover{
+    transform: scale(1.5) rotate(15deg);
+}
+
+
+  /* #column:hover{
    
-        -ms-transform: scale(1.5); /* IE 9 */
-        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        -ms-transform: scale(1.5); 
+        -webkit-transform: scale(1.5); 
         transform: scale(1.5); 
       
+  } */
+
+  /* #column {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
+  #column:hover{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  } */
+
+
+
+
+
+
   #shoppics {
     object-fit: scale-down;
     width: 100%;
@@ -392,26 +437,24 @@ main{
 
 #randombreak {
     background-image: url("https://www.hopculture.com/wp-content/uploads/2019/01/division2_1400x.jpg");
-     background-repeat: no-repeat;
-     background-position: center;
-     background-color: #F2D3BE;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
      width: 100%;
      height: 530px;
-     background-size: cover;
+     /* background-size: cover; */
      position: relative;
      /* top: 10px; */
    }
+  
    .footer-sticky {
-    display: block;
-    width: 100%;
-    height: 110px;
     position: absolute;
-    top:650%;
-    bottom: 0;
-    left: 0;
+    width:100%;
     background: black;
     color: white;
-    /* z-index: 1; */
+    margin-top: 0px;
+    padding-bottom: 20px;
   }
 
 .icons{

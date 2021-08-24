@@ -48,7 +48,11 @@ function renderCart() {
       articleEl.appendChild(divEl);
 
       let h1El = document.createElement('h1');
-      h1El.textContent = cart[i].name;
+      let temName = '';
+      for(let j = 0; j < cart[i].name.split('_').length; j++){
+          temName += `${cart[i].name.split('_')[j]} `
+      }
+      h1El.textContent = temName;
       divEl.appendChild(h1El);
 
       let footerEl1 = document.createElement('footer');

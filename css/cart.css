@@ -1,10 +1,12 @@
 body {
   background: #eee;
-  margin: 0;
+  margin-top: 80px;
   padding: 0;
   overflow-x: hidden;
 }
-
+ main{
+  min-height: 800px;
+}
 .clearfix {
   content: "";
   display: table;
@@ -38,17 +40,23 @@ body {
 .product img {
   width: 100%;
   height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .product header, .product .content {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  
   border-style: none none solid none;
   float: left;
 }
 
+.product .content {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
 .product header {
-  background: #000;
   margin: 0 1% 20px 0;
   overflow: hidden;
   padding: 0;
@@ -66,7 +74,7 @@ body {
 }
 
 .product header h3 {
-  background: #53b5aa;
+  background: black;
   color: #fff;
   font-size: 22px;
   font-weight: 300;
@@ -98,10 +106,11 @@ body {
 }
 
 .product h1 {
-  color: #53b5aa;
-  font-size: 25px;
+  color: black;
+  font-size: 30px;
   font-weight: 300;
-  margin: 17px 0 20px 0;
+  margin: 50px auto auto auto;
+  
 }
 
 .product footer.content {
@@ -122,7 +131,7 @@ body {
 }
 
 .product footer .full-price {
-  background: #53b5aa;
+  background: black;
   color: #fff;
   float: right;
   font-size: 22px;
@@ -156,7 +165,7 @@ body {
 }
 
 .qt-plus:hover, .qt-minus:hover {
-  background: #53b5aa;
+  background: black;
   color: #fff;
   cursor: pointer;
 }
@@ -209,7 +218,7 @@ body {
 }
 
 .btn {
-  background: #53b5aa;
+  background: black;
   border: 1px solid #999;
   border-style: none none solid none;
   cursor: pointer;
@@ -227,31 +236,8 @@ body {
   -o-transition: all .2s linear;
   transition: all .2s linear;
 }
-.btn:hover {
-  color: #fff;
-  background: #429188;
-}
-
-
-
-
 /* ---------Form----------- */
 body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-background-color: #555;
-color: white;
-padding: 16px 20px;
-border: none;
-cursor: pointer;
-opacity: 0.8;
-position: fixed;
-bottom: 23px;
-right: 28px;
-width: 280px;
-}
 
 /* The popup form - hidden by default */
 .form-popup {
@@ -268,46 +254,135 @@ z-index: 9;
 max-width: 300px;
 padding: 10px;
 background-color: white;
+position: relative;
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=number] {
-width: 100%;
+width: 88%;
 padding: 15px;
-margin: 5px 0 22px 0;
+margin: 5px 2px 5px 2px;
 border: none;
 background: #f1f1f1;
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=number]:focus {
-background-color: #ddd;
+background-color: rgb(199, 199, 199);
 outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-background-color: #04AA6D;
-color: white;
-padding: 16px 20px;
-border: none;
 cursor: pointer;
 width: 100%;
 margin-bottom:10px;
-opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
 background-color: red;
 }
-
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-opacity: 1;
+.btn:hover{
+opacity: .8;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-appearance: none;
-margin: 0;
+.form-container h1{
+  font-size: 30px;
+  padding-bottom: 10;
+}
+input[type=number]::-webkit-inner-spin-button{ 
+  appearance: none; 
+  margin: 0; 
+}
+/* ----------------------------------------------------------- */
+
+header{
+margin-bottom: 0%;
+}
+
+* {
+max-width: 100%;
+}
+
+.topnav {
+position: fixed;
+align-items: flex-end;
+justify-content: flex-end;
+top: 0;
+left: 0;
+z-index: 9999;
+width: 100%;
+height: 50px;
+background-color:black;
+box-shadow: 0px 0px 10px gray;
+display: flex;
+line-height: 50px;
+
+}
+
+
+.topnav> .brand {
+  position: absolute;
+  left: 2%;
+  top: 0;
+}
+.topnav> .cart-1 {
+position: absolute;
+right: 2%;
+top: 10%;
+width: 40px; 
+height: 30px
+}
+
+
+
+.topnav .link {
+color: white;
+margin-right:200px ;
+margin-left: 10PX;
+text-decoration: none;
+font-size: 30px;
+position: relative;
+}
+.topnav>a :hover{
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5); 
+
+}
+
+.topnav >.link:hover::after {
+content: "";
+position: absolute;
+right: 20%;
+bottom: 0;
+width : 70%;
+border: 2px solid white;
+}
+
+.footer-sticky {
+position: absolute;
+width:100%;
+background: black;
+color: white;
+margin-top: 10px;
+padding-bottom: 20px;
+}
+.icons{
+padding-top: 1rem;
+text-align: center;
+}
+.icons a{
+text-align: center;
+text-decoration: none;
+font-size: 2rem;
+margin: 0.5rem;
+color: white;
+}
+.company-name{
+font-size: 1.6rem;
+margin-top: 0.5rem;
+background: black;
+border-style: none;
 }
