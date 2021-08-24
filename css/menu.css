@@ -1,0 +1,122 @@
+section div{
+  margin-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+section div:nth-child(1) * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    font-size: 20px;
+}
+section div:nth-child(1) button {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 1.5em;
+    overflow: hidden;
+}
+section div a {
+    padding: 0.3em 0;
+    color: #212121;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 0;
+    text-decoration: none;
+  }
+  section div a:before,
+  section div a:after {
+    position: absolute;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  section div a:before {
+    bottom: 100%;
+    display: block;
+    height: 3px;
+    width: 100%;
+    content: "";
+    background-color: #53b5aa;
+  }
+  section div a:after {
+    padding: 0.3em 0;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    content: attr(data-hover);
+    color: #212121;
+    white-space: nowrap;
+  }
+  section div button:hover a,
+  section div .current a {
+    transform: translateY(100%);
+  }
+
+body {
+    background: #eee;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+footer {
+    content: "";
+    display: table;
+    clear: both;  
+  }
+main {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    width: 980px;
+  }
+li {
+    border: 1px solid #eee;
+    margin: 20px 0;
+    width: 49%;
+    height: 195px;
+    display: inline-block;
+}
+ul li img {
+    width: 234.71px;
+    height: 194px;
+  }
+ul li button{
+    cursor: pointer;
+    background: #53b5aa;
+    color: #fff;
+    font-size: 22px;
+    border: #53b5aa solid;
+    border-radius: 50px;
+    height: 53.6px;
+    margin-left: 5px;
+}
+ul li input{
+    border: white solid;
+    border-radius: 50px;
+    font-size: 20px;
+    height: 53.6px;
+    width: 88px; 
+}
+ul li input:focus{
+    outline: none;
+}
+ul li input,ul li button{
+    box-sizing: border-box;
+    padding: 0 20px;
+    float: right;
+    margin-top: 65px;
+}
+p{
+    margin: 30px 0 0 0;
+    padding: 40px;
+    background: #fcfcfc;
+    border: 1px solid #ccc;
+    border-style: none none solid none;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 7px 0;
+    padding: 14px 40px;
+    text-align: center;
+}
+
+
