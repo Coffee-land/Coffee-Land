@@ -108,6 +108,7 @@ function renderMenu(productType) {
                 for(let x = 0; x < cart.length; x++){
                     total += cart[x].quantity * cart[x].price;
                 }
+                inputEl.value = '1';
             });
             liEl.appendChild(imgEl);
             liEl.appendChild(spanEl);
@@ -126,3 +127,5 @@ setInterval(function(){
     }
         document.getElementById('total').innerHTML = total;},
     100);
+    
+// lolololololololololololololololoololololololololol

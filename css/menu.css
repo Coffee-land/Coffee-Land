@@ -1,4 +1,7 @@
 body {font-family: Arial, Helvetica, sans-serif;}
+#bu-container{
+  margin-top: 100px;
+}
 section div{
   margin-top: 10px;
   text-align: center;
@@ -60,8 +63,8 @@ section div a {
 
 body {
     background: #eee;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     overflow-x: hidden;
   }
 main {
@@ -126,7 +129,7 @@ ul li input,ul li button{
     float: right;
     margin-top: 65px;
 }
-p{
+#t-p{
     margin: 30px 0 0 0;
     padding: 40px;
     background: #fcfcfc;
@@ -141,14 +144,6 @@ p{
 }
 
 /* -------------------- */
-header{
-  margin-bottom: 0%;
-}
-
-* {
-  max-width: 100%;
-}
-
 .topnav {
   position: fixed;
   align-items: flex-end;
@@ -157,7 +152,7 @@ header{
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color:black;
   box-shadow: 0px 0px 10px gray;
   display: flex;
@@ -168,26 +163,27 @@ header{
 
 .topnav> .brand {
     position: absolute;
-    left: 2%;
-    top: 0;
+    left: 5%;
+    top: 12%;
 }
-.topnav> .cart-1 {
-  position: absolute;
-  right: 2%;
-  top: 10%;
-  width: 40px; 
-  height: 30px
-}
-
-
 
 .topnav .link {
-  color: white;
-  margin-right:200px ;
-  margin-left: 10PX;
+  flex: left;
+  margin: 7% 10px 11px;
+  padding: 10px 0 0 12px;
   text-decoration: none;
-  font-size: 30px;
-  position: relative;
+  color: #fff;
+  font-size: 25px;
+  font-family:open-sans-serif;
+  /* font-weight: bolder;  */
+
+}
+.topnav >a>i{
+  display: inline;
+  float: left;
+  margin-top: 12px;
+  margin-right:12px;
+  margin-bottom:17px;
 }
 .topnav>a :hover{
   -ms-transform: scale(1.5); /* IE 9 */
@@ -196,38 +192,47 @@ header{
 
 }
 
-.topnav >.link:hover::after {
-  content: "";
-  position: absolute;
-  right: 20%;
-  bottom: 0;
-  width : 70%;
-  border: 2px solid white;
-}
+.topnav >.link:hover {
+  border-bottom: 2px solid white;
 
+}
 .footer-sticky {
   position: absolute;
   width:100%;
   background: black;
-  color: white;
-  margin-top: 10px;
+  color:white;
+  margin-top: 0px;
+  font-family:open-sans-serif;
   padding-bottom: 20px;
-
 }
+
 .icons{
   padding-top: 1rem;
   text-align: center;
+
 }
+
 .icons a{
   text-align: center;
   text-decoration: none;
   font-size: 2rem;
   margin: 0.5rem;
-  color: white;
+  color: #f4f4f4;
 }
+
 .company-name{
   font-size: 1.6rem;
   margin-top: 0.5rem;
-  background: black;
-  border-style: none;
 }
+
+@media (max-width: 500px){
+  html{
+      font-size: 50%;
+  }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+  html{
+  font-size: 50%;
+  }
+}  
