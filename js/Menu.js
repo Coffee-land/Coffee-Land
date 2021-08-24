@@ -11,25 +11,48 @@ let total = 0;
 function Product(name, price, type) {
     this.name = name;
     this.price = price;
-    this.imgurl = `img/${name}.jpg`;
+    this.imgurl = `images/${name}.jpg`;
     this.type = type;
     this.quantity = 1;
     products.push(this);
 }
 // create prodacts each product have type and price and name 
-new Product('americano-cold', 12, 'cold');
-new Product('americano', 12, 'hot');
-new Product('bean', 30, 'beans');
-new Product('beanBag', 30, 'beans');
-new Product('latte', 15, 'hot');
-new Product('latte', 15, 'cold');
-new Product('americano', 12, 'cold');
-new Product('latteCold', 15, 'cold');
+// Cold coffee
+new Product('Honey_Almondmilk_Cold_Brew', 3, 'cold');
+new Product('Iced_Apple_Crisp_Macchiato', 4, 'cold');
+new Product('Iced_Caffè_Americano', 3, 'cold');
+new Product('Iced_Caffè_Mocha', 3, 'cold');
+new Product('Iced_Chocolate_Almondmilk', 4, 'cold');
+new Product('Iced_Espresso', 3, 'cold');
+new Product('Iced_White_Chocolate_Mocha', 3, 'cold');
+new Product('Pumpkin_Cream_Cold_Brew', 4, 'cold');
+//Hot coffee
+new Product('Apple_Crisp_Macchiato', 3, 'hot');
+new Product('Blonde_Roast', 4, 'hot');
+new Product('Caffè_Americano', 3, 'hot');
+new Product('Caffè_Misto', 3, 'hot');
+new Product('Caffè_Mocha', 4, 'hot');
+new Product('Cappuccino', 3, 'hot');
+new Product('Espresso', 3, 'hot');
+new Product('Pumpkin_Spice_Latte', 4, 'hot');
+// Coffee beans
+new Product('brazil_brown', 3, 'beans');
+new Product('colombia_blonde', 4, 'beans');
+new Product('german_blonde', 3, 'beans');
+new Product('Ireland_blonde', 3, 'beans');
+new Product('poland_brown', 4, 'beans');
+new Product('romania_brown', 3, 'beans');
+// Snacks
+new Product('Blueberry_Scone', 15, 'snacks');
+new Product('Chocolate_Chip_Cookie', 15, 'snacks');
+new Product('Cinnamon_Coffee_Cake', 15, 'snacks');
+new Product('Double_Chocolate_Brownie', 15, 'snacks');
+new Product('Marshmallow_Dream_Bar', 15, 'snacks');
+new Product('Pumpkin_Cream_Cheese_Muffin', 15, 'snacks');
 
 // checking localStorage 
 function checkingLocalStorage() {
     if (localStorage.getItem('cart')) {
-        console.log('lol')
         cart = JSON.parse(localStorage.getItem('cart'));
     } else {
         console.log('l');
@@ -53,6 +76,12 @@ function renderMenu(productType) {
             let imgEl = document.createElement('img');
             let inputEl = document.createElement('input');
             let buttonEl = document.createElement('button');
+            let spanEl = document.createElement('span');
+            let temName = '';
+            for(let j = 0; j < products[i].name.split('_').length; j++){
+                temName += `${products[i].name.split('_')[j]} `
+            }
+            spanEl.textContent = temName;
             imgEl.src = products[i].imgurl;
             inputEl.type = 'number';
             inputEl.value = '1';
@@ -81,6 +110,7 @@ function renderMenu(productType) {
                 }
             });
             liEl.appendChild(imgEl);
+            liEl.appendChild(spanEl);
             liEl.appendChild(buttonEl);
             liEl.appendChild(inputEl);
             ulEl.appendChild(liEl);

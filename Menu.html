@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
     <title>Menu</title>
 </head>
+
 <body>
     <header>
         <div class="topnav">
-            <a class = "brand"href="Home.html"><img style="width: 50px; height: 50px" src="images/icon.png" alt=""></a>
+            <a class="brand" href="Home.html"><img style="width: 50px; height: 50px" src="images/icon.png" alt=""></a>
             <a class="link" href="Home.html">Home</a>
-            <a class="link"href="Menu.html">Menu</a>
-            <a class="link"href="Hosting-An-Event.html">Host An Event</a>
-            <a class="link"href="About-Us.html">About US</a>
-            <a class = "cart-1"href="Cart.Html"><img src="https://icon-library.com/images/shopping-cart-icon-white/shopping-cart-icon-white-12.jpg" alt=""></a>
+            <a class="link" href="Menu.html">Menu</a>
+            <a class="link" href="Hosting-An-Event.html">Host An Event</a>
+            <a class="link" href="About-Us.html">About US</a>
+            <a class="cart-1" href="Cart.Html"><img
+                    src="https://icon-library.com/images/shopping-cart-icon-white/shopping-cart-icon-white-12.jpg"
+                    alt=""></a>
         </div>
- 
     </header>
     <main>
         <Section>
-        <div>
-           <button id = "hotMenu" onclick = "renderMenu('hot')"><a href="#" data-hover="Hot Coffee">Hot Coffee</a></button>
-           <button id = "coldMenu" onclick = "renderMenu('cold')"><a href="#" data-hover="Cold Coffee">Cold Coffee</a></button>
-           <button id = "beansMenu" onclick = "renderMenu('beans')"><a href="#" data-hover="Coffee Beans">Coffee Beans</a></button>
-        </div>
-        <div id = "menu"></div>
+            <div>
+                <button onclick="renderMenu('hot')"><a href="#" data-hover="Hot Coffee">Hot
+                        Coffee</a></button>
+                <button onclick="renderMenu('cold')"><a href="#" data-hover="Cold Coffee">Cold
+                        Coffee</a></button>
+                <button onclick="renderMenu('beans')"><a href="#" data-hover="Coffee Beans">Coffee
+                        Beans</a></button>
+                <button onclick="renderMenu('snacks')"><a href="#" data-hover="Snacks">Snacks</a></button>
+            </div>
+            <div id="menu"></div>
         </Section>
-        <p>Total: <span id = 'total'>0</span> JOD</p>
+        <p>Total: <span id='total'>0</span> JOD</p>
     </main>
     <footer>
         <div class="footer-sticky">
             <div class="icons">
-               <a href="#"><i class="fab fa-facebook"></i></a>
-               <a href="#"><i class="fab fa-linkedin"></i></a>
-               <a href="#"><i class="fab fa-instagram"></i></a>
-               <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
                 <p class="company-name">
                     ASAC students &copy; 2021, ALL Rights Reserved
                 </p>
             </div>
-          </div>
+        </div>
     </footer>
     <script src="js/Menu.js"></script>
 </body>
+
 </html>
