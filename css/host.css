@@ -1,0 +1,142 @@
+body {
+  background-color: rgb(255, 247, 174);
+}
+
+section{
+  display: block;
+  /* background-color: white; */
+}
+#img1 img{
+  border-radius: 8px;
+  display: block;
+  margin-right: 7%;
+  margin-left: 7%;
+  margin-top: 3%;
+  height: 860px;
+  width: 86%;
+  box-shadow: 5px 5px 10px black;
+
+  }
+#img2 img{
+  border-radius: 8px;
+  display: block;
+  margin-right: 3%;
+  margin-left: 7%;
+  width: 41.5%;
+  height: 338px;
+  margin-top: 3%;
+  float: left;
+  box-shadow: 5px 5px 10px black;
+
+}
+/* .row::after{
+  content: "";
+  clear: both;
+  display: table;
+} */
+#img3 img{
+  border-radius: 8px;
+  display: block;
+  margin-right: 7%;
+  /* margin-left: 7%; */
+  width: 41.5%;
+  height: 338px;
+  margin-top: 3%;
+  float: left;
+  box-shadow: 5px 5px 10px black;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 3%;
+  font-family: Amatic SC, cursive;
+
+
+  /* background-color: #eee; */
+}
+section p{
+  /* background-color: #eee; */
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  margin-top: 28%;
+  font-family: Amatic SC, cursive;
+  margin-bottom: 3%;
+  
+}
+
+
+button{
+  background: #000000;
+  border: 1px solid #999;
+  border-style: none none solid none;
+  cursor: pointer;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 16px 0;
+  width: 290px;
+  text-align: center;
+  margin-left: 41.5%;
+  margin-bottom: 3%;
+
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.open-button:hover{
+  color: #fff;
+  background: #429188;
+}
+.btn:hover{
+  color: #fff;
+  background: #429188;
+}
+.btnCancel:hover{
+  color: #fff;
+  background: #429188;
+}
+h2{
+  padding-left: 10px;
+  font-size: 30px;
+  font-family: Amatic SC, cursive;
+}
+div p{
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: Amatic SC, cursive;
+}
+div h3{
+  font-size: 25px;
+  padding-left: 10px;
+  font-family: Amatic SC, cursive;
+}
+div{
+  font-size: 20px;
+  padding-left: 10px;
+  text-align: center;
+  font-family: Amatic SC, cursive;
+}
+div input{
+  border: 1px solid black;
+  width: 20%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+
+  /* background: white; */
+}
+
+
+
+
+
+
+
+
+
