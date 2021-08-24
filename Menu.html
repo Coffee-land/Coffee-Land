@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>Menu</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <Section>
+            <div>
+                <button id="hotMenu" onclick="renderMenu('hot')"><a href="#" data-hover="Hot Coffee">Hot Coffee</a></button>
+                <button id="coldMenu" onclick="renderMenu('cold')"><a href="#" data-hover="Cold Coffee">Cold Coffee</a></button>
+                <button id="beansMenu" onclick="renderMenu('beans')"><a href="#" data-hover="Coffee Beans">Coffee Beans</a></button>
+            </div>
+            <div id="menu"></div>
+        </Section>
+        <p>Total: <span id='total'>0</span> JOD</p>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/Menu.js"></script>
+</body>
+
+</html>
