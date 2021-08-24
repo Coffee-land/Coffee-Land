@@ -1,10 +1,15 @@
 body {
-  background-color: rgb(255, 247, 174);
+  background: #fff;
+  padding: 0.375rem;
+  min-height: 100vh;
+  border: 0.125rem solid rgba(0, 0, 0, 0.6);
+  margin: 10px;
+  max-width: 1600px;
+
 }
 
 section{
   display: block;
-  /* background-color: white; */
 }
 #img1 img{
   border-radius: 8px;
@@ -29,16 +34,10 @@ section{
   box-shadow: 5px 5px 10px black;
 
 }
-/* .row::after{
-  content: "";
-  clear: both;
-  display: table;
-} */
 #img3 img{
   border-radius: 8px;
   display: block;
   margin-right: 7%;
-  /* margin-left: 7%; */
   width: 41.5%;
   height: 338px;
   margin-top: 3%;
@@ -52,22 +51,27 @@ h1 {
   font-size: 50px;
   margin-top: 3%;
   font-family: Amatic SC, cursive;
-
-
-  /* background-color: #eee; */
+  text-shadow: 5px 5px 10px black;
+  color: black;
+  text-decoration: underline;
+  
 }
-section p{
-  /* background-color: #eee; */
+#l{
+  word-spacing: 5px;
   text-align: center;
   font-size: 25px;
   padding: 20px;
   margin-top: 28%;
-  font-family: Amatic SC, cursive;
+ 
   margin-bottom: 3%;
+line-height: 200%;
+  font-family: 'Yomogi';font-size: 22px;
+  
+  margin-left: 15%;
+  margin-right: 15%;
+
   
 }
-
-
 button{
   background: #000000;
   border: 1px solid #999;
@@ -80,7 +84,7 @@ button{
   padding: 16px 0;
   width: 290px;
   text-align: center;
-  margin-left: 41.5%;
+  margin-left: 33%;
   margin-bottom: 3%;
 
   -webkit-transition: all .2s linear;
@@ -88,6 +92,10 @@ button{
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
+}
+.open-button{
+  margin-left: 40%;
+
 }
 .open-button:hover{
   color: #fff;
@@ -121,16 +129,52 @@ div{
   padding-left: 10px;
   text-align: center;
   font-family: Amatic SC, cursive;
+ 
 }
 div input{
-  border: 1px solid black;
+  border: solid black;
   width: 20%;
   padding: 15px;
   margin: 5px 0 22px 0;
-  border: none;
-
-  /* background: white; */
 }
+ 
+#extrainfo{
+  border: solid black;
+}
+
+.container {
+  border-top-left-radius: 37px 140px;
+  border-top-right-radius: 23px 130px;
+  border-bottom-left-radius: 110px 19px;
+  border-bottom-right-radius: 120px 24px;
+
+  display: block;
+  position: relative;
+  border: solid 3px #000000;
+  padding: 40px 60px;
+  max-width: 800px;
+  width: 70%;
+  margin: 100px auto 0;
+  font-size: 17px;
+  line-height: 28px;
+  transform: rotate(-1deg);
+  transition: all 0.13s ease-in;
+  box-shadow: 5px 5px 10px black;
+}
+ 
+ .container:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+}
+
+.container:hover .border {
+  transform: translateY(4px) rotate(-5deg);
+}
+
+.border {
+  position: absolute;
+  transition: all 0.13s ease-in;
+} 
 
 
 

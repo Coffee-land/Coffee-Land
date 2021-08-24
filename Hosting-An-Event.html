@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,11 @@
 
 <body>
     <header>
+        
 
     </header>
     <main>
-        <!-- <section id="titel"> <h1> Host An Event </h1> </section> -->
+       
         <h1> Host An Event </h1>
 
         <div id="img1">
@@ -27,16 +29,21 @@
         <div id="img3">
             <img src="img/coffee_shop_sign.jpg" alt="coffee_shop_sign">
         </div>
+         
+           </section>
+        
+            <p id="l">Hello Friend, <br>
 
-        <section id="p">
-            <p>Hello Friend, <br>
-
-                Imagine the laughter of your closest friends as you catch up over a craft beer or local rose while sharing a delectable charcuterie board. Visualize toasting a glass of prosecco with your coworkers after completing a paramount project. Whether you’re organizing a gathering for friends and colleagues, throwing a fundraiser, or looking to book a milestone moment, We got you covered.</p>
-        </section>
-
+                Imagine the laughter of your closest friends as you catch up over a craft beer or local rose while
+                sharing a delectable charcuterie board. Visualize toasting a glass of prosecco with your coworkers after
+                completing a paramount project. Whether you’re organizing a gathering for friends and colleagues,
+                throwing a fundraiser, or looking to book a milestone moment, We got you covered.</p>
+       
+                <button class="open-button" onclick="openForm()">pick your event from here </button>
+        <div class="container">
         <form id='form'>
 
-            <button class="open-button" onclick="openForm()">pick your event from here </button>
+            <!-- <button class="open-button" onclick="openForm()">pick your event from here </button> -->
 
             <div class="form-popup" id="myForm">
                 <h2>Event Request</h2> <br>
@@ -63,14 +70,15 @@
                 </div>
 
                 <p>
-                <br><h3>Your Event Details:</h3><br>
+                    <br>
+                <h3>Your Event Details:</h3><br>
 
 
 
                 <div>
                     <label for="eventNature">Nature of this Event (e.g., Birthday Party or Business Dinner)</label><br>
-                    
-                    <textarea id="eventNature" name="eventNature"></textarea>
+
+                    <textarea id="extrainfo" name="eventNature"></textarea>
                 </div>
 
                 <div>
@@ -99,9 +107,13 @@
                 </div>
 
                 <br><button type="submit" class="btn">Book Now</button><br>
-                <button type="button" class="btnCancel" onclick="closeForm()">Close</button>
+              
         </form>
+        <button type="button" class="btnCancel" onclick="closeForm()">Close</button>
         </div>
+        
+    </div>
+   
     </main>
     <footer>
 
@@ -110,4 +122,3 @@
 </body>
 
 </html>
-
