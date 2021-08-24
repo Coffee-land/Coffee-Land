@@ -1,44 +1,75 @@
+body {
+  background-color: rgb(255, 247, 174);
+}
+
 section{
   display: block;
-  background-color: white;
+  /* background-color: white; */
 }
 #img1 img{
   border-radius: 8px;
   display: block;
-  margin-right: auto;
+  margin-right: 7%;
+  margin-left: 7%;
+  margin-top: 3%;
+  height: 860px;
+  width: 86%;
+  box-shadow: 5px 5px 10px black;
+
   }
 #img2 img{
   border-radius: 8px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 507px;
+  margin-right: 3%;
+  margin-left: 7%;
+  width: 41.5%;
   height: 338px;
+  margin-top: 3%;
+  float: left;
+  box-shadow: 5px 5px 10px black;
+
 }
+/* .row::after{
+  content: "";
+  clear: both;
+  display: table;
+} */
 #img3 img{
   border-radius: 8px;
   display: block;
-  margin-left: auto;
-  width: 507px;
+  margin-right: 7%;
+  /* margin-left: 7%; */
+  width: 41.5%;
   height: 338px;
+  margin-top: 3%;
+  float: left;
+  box-shadow: 5px 5px 10px black;
+  
 }
 
 h1 {
   text-align: center;
   font-size: 50px;
-  background-color: #eee;
+  margin-top: 3%;
+  font-family: Amatic SC, cursive;
+
+
+  /* background-color: #eee; */
 }
 section p{
-  background-color: #eee;
+  /* background-color: #eee; */
   text-align: center;
   font-size: 25px;
   padding: 20px;
+  margin-top: 28%;
+  font-family: Amatic SC, cursive;
+  margin-bottom: 3%;
+  
 }
-form{
-  background-color: #eee;
-}
+
+
 button{
-  background: #53b5aa;
+  background: #000000;
   border: 1px solid #999;
   border-style: none none solid none;
   cursor: pointer;
@@ -49,6 +80,8 @@ button{
   padding: 16px 0;
   width: 290px;
   text-align: center;
+  margin-left: 41.5%;
+  margin-bottom: 3%;
 
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -60,22 +93,34 @@ button{
   color: #fff;
   background: #429188;
 }
+.btn:hover{
+  color: #fff;
+  background: #429188;
+}
+.btnCancel:hover{
+  color: #fff;
+  background: #429188;
+}
 h2{
   padding-left: 10px;
   font-size: 30px;
+  font-family: Amatic SC, cursive;
 }
 div p{
   padding-left: 10px;
   font-size: 18px;
+  font-family: Amatic SC, cursive;
 }
 div h3{
   font-size: 25px;
   padding-left: 10px;
+  font-family: Amatic SC, cursive;
 }
 div{
   font-size: 20px;
   padding-left: 10px;
   text-align: center;
+  font-family: Amatic SC, cursive;
 }
 div input{
   border: 1px solid black;
@@ -83,8 +128,14 @@ div input{
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: white;
+
+  /* background: white; */
 }
+
+
+
+
+
 
 
 
