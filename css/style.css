@@ -44,27 +44,19 @@ header{
   
   .topnav> .brand {
       position: absolute;
-      left: 2%;
+      left: 5%;
       top: 12%;
   }
-  .topnav> .cart-1 {
-    position: absolute;
-    right: 1%;
-    top: 22%;
-    margin-left:100px ;
-    width: 40px; 
-    height: 30px
-}
+
 .topnav .link {
-    color: white;
-    margin-right:100px ;
-    margin-left: 10PX;
+    flex: left;
+    margin: 7% 10px 0 ;
+    padding: 10px 0 0 10px;
     text-decoration: none;
-    font-size: 30px;
-    position: relative;
-    display: inline;
-    /* font-family: Amatic SC, cursive,sans-serif;
-    font-weight: bolder; */
+    color: #fff;
+    font-size: 25px;
+    font-family:open-sans-serif;
+    /* font-weight: bolder;  */
 
 }
 .topnav >a>i{
@@ -81,19 +73,13 @@ header{
   
   }
   
-  .topnav >.link:hover::after {
-    content: "";
-    position: absolute;
-    right: 20%;
-    bottom: 0;
-    width : 70%;
-    border: 2px solid white;
+  .topnav >.link:hover {
+    border-bottom: 2px solid white;
   }
 
 
   
   #big-h{
-
     position: absolute;
     color: whitesmoke;
     font-size:170px;
@@ -102,7 +88,6 @@ header{
     width: 60%;
   }
   #big-h:hover{
-    /* color: rgb(197, 169, 7); */
     color:black;
   }
 
