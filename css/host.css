@@ -1,10 +1,10 @@
 body {
   background: #fff;
-  padding: 0.375rem;
-  min-height: 100vh;
-  border: 0.125rem solid rgba(0, 0, 0, 0.6);
-  margin: 10px;
-  max-width: 1600px;
+  /* padding: 0.375rem; */
+  /* min-height: 100vh; */
+  /* border: 0.125rem solid rgba(0, 0, 0, 0.6); */
+  /* margin: 10px; */
+  /* max-width: 1600px; */
 
 }
 
@@ -12,65 +12,50 @@ section{
   display: block;
 }
 #img1 img{
-  border-radius: 8px;
   display: block;
-  margin-right: 7%;
-  margin-left: 7%;
-  margin-top: 3%;
-  height: 860px;
-  width: 86%;
+  height: 100%;
+  width: 100%;
   box-shadow: 5px 5px 10px black;
 
   }
-#img2 img{
-  border-radius: 8px;
-  display: block;
-  margin-right: 1%;
-  margin-left: 7%;
-  width: 42.5%;
-  height: 400px;
-  margin-top: 1%;
-  float: left;
-  box-shadow: 5px 5px 10px black;
 
-}
-#img3 img{
+#img3 {
+  position:absolute;
+  right: 0;
   border-radius: 8px;
   display: block;
-  margin-right: 7%;
-  width: 41.5%;
-  height: 338px;
+  width: 40%;
   margin-top: 3%;
-  float: left;
-  box-shadow: 5px 5px 10px black;
+
+  
   
 }
 
 h1 {
   text-align: center;
-  font-size: 50px;
-  margin-top: 3%;
-  font-family: Amatic SC, cursive;
-  text-shadow: 5px 5px 10px black;
+  font-size: 70px;
+  margin: 5% 0 2% 0;
+  /* font-family: Amatic , cursive;   */
   color: black;
-  text-decoration: underline;
-  
+
+  /* text-shadow: 5px 5px 10px black; */
+  /* text-decoration: underline; */
+}
+#sp-1{
+  font-family: Amatic SC, cursive;
+  font-size: 40px;
+  /* background-color: rgb(255, 117, 117); */
 }
 #l{
+  position:absolute;
+  left:2%;
+   width: 30%;
   word-spacing: 5px;
   text-align: center;
   font-size: 25px;
-  padding: 20px;
-  margin-top: 28%;
- 
-  margin-bottom: 3%;
-line-height: 200%;
+  line-height: 200%;
+  margin-top: 5%;
   font-family: 'Yomogi';font-size: 22px;
-  
-  margin-left: 15%;
-  margin-right: 15%;
-
-  
 }
 button{
   background: #000000;
@@ -96,7 +81,8 @@ button{
 
 }
 .open-button{
-  margin-left: 40%;
+  margin-left: 10%;
+  margin-top: 40%;
 
 }
 .open-button:hover{
@@ -141,6 +127,9 @@ div input{
 }
 
 .container {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  margin-left: 25%;
   border-top-left-radius: 37px 140px;
   border-top-right-radius: 23px 130px;
   border-bottom-left-radius: 110px 19px;
@@ -152,7 +141,7 @@ div input{
   padding: 40px 60px;
   max-width: 800px;
   width: 70%;
-  margin: 100px auto 0;
+  /* margin: 100px auto 0; */
   font-size: 17px;
   line-height: 28px;
   transform: rotate(-1deg);
@@ -175,7 +164,98 @@ div input{
 } 
 
 
+.topnav {
+  position: fixed;
+  align-items: flex-end;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 70px;
+  background-color:black;
+  box-shadow: 0px 0px 10px gray;
+  display: flex;
+  line-height: 50px;
 
+}
+
+
+.topnav> .brand {
+    position: absolute;
+    left: 5%;
+    top: 12%;
+}
+
+.topnav .link {
+  flex: left;
+  margin: 7% 10px 11px;
+  padding: 10px 0 0 12px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-family:open-sans-serif;
+  /* font-weight: bolder;  */
+
+}
+.topnav >a>i{
+  display: inline;
+  float: left;
+  margin-top: 12px;
+  margin-right:12px;
+  margin-bottom:17px;
+}
+.topnav>a :hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+
+}
+
+.topnav >.link:hover {
+  border-bottom: 2px solid white;
+}
+
+.footer-sticky {
+  position: absolute;
+  width:100%;
+  background: black;
+  color: white;
+  margin-top: 0px;
+  padding-bottom: 20px;
+}
+
+.icons{
+  padding-top: 1rem;
+  text-align: center;
+
+}
+
+.icons a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: #f4f4f4;
+}
+
+.company-name{
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+  html{
+      font-size: 50%;
+      float: right;
+  }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+  html{
+  font-size: 50%;
+  }
+}    
 
 
 
