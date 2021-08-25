@@ -84,9 +84,9 @@
                     <label for="email">Email Adress</label><br>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div>
+                <div id="phonenum" >
                     <label for="phone">Phone number</label><br>
-                    <input type="phonenum" name="phonenum" id="phonenum" required>
+                    <input type="number" name="phonenum"  required>
                 </div>
 
                 <p>
@@ -118,7 +118,7 @@
 
                 <div>
                     <label for="guests">Number of people </label><br>
-                    <input type="number" name="guests" id="guests" required>
+                    <input type="number" min="1" max="100" value="1" name="guests" id="guests" required>
                 </div>
 
                 <div>
@@ -126,14 +126,14 @@
                     <textarea id="extrainfo" name="extrainfo"></textarea>
                 </div>
 
-                <br><button type="submit" class="btn">Book Now</button><br>
+                <br><button type="button" onclick="success()" class="btn">Book Now</button><br>
               
         </form>
         <button type="button" class="btnCancel" onclick="closeForm()">Close</button>
         </div>
         
     </div>
-   
+    <div id="box"></div>
     </main>
     
         <footer class="footer-sticky">
