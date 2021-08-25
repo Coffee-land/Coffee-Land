@@ -63,8 +63,12 @@ function renderCart() {
       span1El.className = 'qt-minus';
       span1El.textContent = '-';
       span1El.addEventListener('click', function () {
-        if (cart[i].quantity > 1) {
+        if (cart[i].quantity > 0) {
           cart[i].quantity--;
+        }
+        if (cart[i].quantity === 0){
+            cart.splice(i, 1);
+            subtotalArr.splice(i,1);
         }
         upToDataStorage();
         renderCart();
