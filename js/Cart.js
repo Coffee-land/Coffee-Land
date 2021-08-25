@@ -48,7 +48,11 @@ function renderCart() {
       articleEl.appendChild(divEl);
 
       let h1El = document.createElement('h1');
-      h1El.textContent = cart[i].name;
+      let temName = '';
+      for(let j = 0; j < cart[i].name.split('_').length; j++){
+          temName += `${cart[i].name.split('_')[j]} `
+      }
+      h1El.textContent = temName;
       divEl.appendChild(h1El);
 
       let footerEl1 = document.createElement('footer');
@@ -59,8 +63,12 @@ function renderCart() {
       span1El.className = 'qt-minus';
       span1El.textContent = '-';
       span1El.addEventListener('click', function () {
-        if (cart[i].quantity > 1) {
+        if (cart[i].quantity > 0) {
           cart[i].quantity--;
+        }
+        if (cart[i].quantity === 0){
+            cart.splice(i, 1);
+            subtotalArr.splice(i,1);
         }
         upToDataStorage();
         renderCart();
