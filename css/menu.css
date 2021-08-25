@@ -63,8 +63,6 @@ section div a {
 
 body {
     background: #eee;
-    /* margin: 0;
-    padding: 0; */
     overflow-x: hidden;
   }
 main {
@@ -86,8 +84,6 @@ ul li img {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
-
   }
   li span{
   position: absolute;
@@ -147,7 +143,6 @@ ul li input,ul li button{
     padding: 14px 40px;
     text-align: center;
 }
-
 /* -------------------- */
 .topnav {
   position: fixed;
@@ -180,8 +175,6 @@ ul li input,ul li button{
   color: #fff;
   font-size: 25px;
   font-family:open-sans-serif;
-  /* font-weight: bolder;  */
-
 }
 .topnav >a>i{
   display: inline;
@@ -191,12 +184,11 @@ ul li input,ul li button{
   margin-bottom:17px;
 }
 .topnav>a :hover{
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
   transform: scale(1.5); 
 
 }
-
 .topnav >.link:hover {
   border-bottom: 2px solid white;
 
@@ -210,13 +202,11 @@ ul li input,ul li button{
   font-family:open-sans-serif;
   padding-bottom: 20px;
 }
-
 .icons{
   padding-top: 1rem;
   text-align: center;
 
 }
-
 .icons a{
   text-align: center;
   text-decoration: none;
@@ -224,18 +214,15 @@ ul li input,ul li button{
   margin: 0.5rem;
   color: #f4f4f4;
 }
-
 .company-name{
   font-size: 1.6rem;
   margin-top: 0.5rem;
 }
-
 @media (max-width: 500px){
   html{
       font-size: 50%;
   }
 }    
-
 @media(min-width: 501px) and (max-width: 768px){
   html{
   font-size: 50%;

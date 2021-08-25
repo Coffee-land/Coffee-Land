@@ -164,3 +164,41 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
+function success(){
+  if(cart.length !== 0){
+  let boxEl = document.getElementById('box');
+
+  let alerEl = document.createElement('div');
+  alerEl.className = 'success alert';
+  boxEl.appendChild(alerEl);
+
+  let alertBodyEl = document.createElement('div');
+  alertBodyEl.className = 'alert-body';
+  alertBodyEl.textContent = 'Success';
+  alerEl.appendChild(alertBodyEl);
+  closeForm()
+
+  setInterval(function(){boxEl.innerHTML=''},3000);
+
+  cart.splice(0, cart.length);
+  subtotalArr=0;
+  upToDataStorage();
+  renderCart();
+  renderFooter()
+}
+else{
+  let boxEl = document.getElementById('box');
+
+  let alerEl = document.createElement('div');
+  alerEl.className = 'empty alert';
+  boxEl.appendChild(alerEl);
+
+  let alertBodyEl = document.createElement('div');
+  alertBodyEl.className = 'alert-empty';
+  alertBodyEl.textContent = 'The cart is empty';
+  alerEl.appendChild(alertBodyEl);
+  setInterval(function(){boxEl.innerHTML=''},3000);
+  closeForm()
+}
+}
